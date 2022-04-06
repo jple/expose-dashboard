@@ -3,17 +3,15 @@
 # && ssh -p 2222 root@localhost
 
 FROM continuumio/miniconda3:latest
-EXPOSE 5000
 SHELL ["/bin/bash", "-c"]
 
-ADD requirement.yml app_dash.py bin /root/
+ADD requirement.yml app_dash.py bin /root
 #WORKDIR /root
 
-RUN apt update && apt install -y openssh-server vim && \
+RUN apt update && apt install -y vim && \
 conda env create -f /root/requirement.yml 
 
 #TODO: conda activate : voir https://pythonspeed.com/articles/activate-conda-dockerfile/
 #TODO: set default conda env
-CMD service ssh start && \
-/opt/conda/bin/conda activate expose_plot && pip install gunicorn && \
+CMD /opt/conda/bin/conda activate expose_plot && pip install gunicorn && \
 /bin/bash
