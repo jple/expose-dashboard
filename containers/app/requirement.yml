@@ -1,0 +1,9 @@
+name: expose_plot
+channels:
+  - defaults
+dependencies:
+  - python=3.7
+  - dash
+  - numpy
+  - plotly
+  - pandas
