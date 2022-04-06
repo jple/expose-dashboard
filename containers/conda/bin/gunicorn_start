@@ -7,7 +7,7 @@ BIND=0.0.0.0:5000
 # USER=hello
 # GROUP=webapps
 CONDA_ENV=expose_plot
-export DASH_URL_BASE_PATHNAME="/tt/"
+export DASH_URL_BASE_PATHNAME="/exposeApp/"
 
 source activate $CONDA_ENV
 
