@@ -6,6 +6,8 @@ FROM continuumio/miniconda3:latest
 SHELL ["/bin/bash", "-c"]
 
 ADD requirement.yml app_dash.py bin /root
+#TODO: test avec WORKDIR /usr/local/ puisCOPY . .
+
 #WORKDIR /root
 
 RUN apt update && apt install -y vim && \
