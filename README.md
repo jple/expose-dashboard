@@ -9,3 +9,10 @@ La solution consiste en les containers :
 
 Chaque répertoire contient les fichiers à insérer dans les différents containers.
 
+# Installation
+## Création des containers
+- conda : partir du dockerfile
+- nginx : utiliser l'image officiel nginx
+- ldap : utiliser l'image bitnami/openldap (?)
+
+
