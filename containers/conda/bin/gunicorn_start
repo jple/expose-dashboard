@@ -1,0 +1,17 @@
+APP_NAME="hello world"
+MODULE_NAME="app_dash"
+VAR_NAME="appServer"
+#BIND=unix:$(pwd)/socket.unix
+BIND=0.0.0.0:5000
+
+# USER=hello
+# GROUP=webapps
+CONDA_ENV=expose_plot
+export DASH_URL_BASE_PATHNAME="/tt/"
+
+source activate $CONDA_ENV
+
+gunicorn $MODULE_NAME:$VAR_NAME \
+--bind=$BIND \
+--name $NAME \ 
+# --user=$USER --group=$GROUP \
