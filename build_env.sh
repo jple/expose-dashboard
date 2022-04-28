@@ -20,7 +20,6 @@ docker exec -it conda /bin/bash
 
 # Need to manually install gunicorn in the expose conda env...
 source activate explose_plot
-pip install gunicorn
 
 # configure gunicorn start script
 /root/bin/gunicorn_start
