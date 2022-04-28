@@ -5,12 +5,13 @@
 FROM continuumio/miniconda3:latest
 SHELL ["/bin/bash", "-c"]
 
-ADD requirement.yml app_dash.py bin /root
-#TODO: test avec WORKDIR /usr/local/ puisCOPY . .
+COPY requirement.yml app_dash.py /root/
+COPY bin/ /root/bin/
 
-#WORKDIR /root
+WORKDIR /root
 
-RUN apt update && apt install -y vim && \
+
+RUN apt update && apt install -y --no-install-recommends vim && \
 conda env create -f /root/requirement.yml 
 
 CMD /root/bin/gunicorn_start
