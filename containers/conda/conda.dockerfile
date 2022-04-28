@@ -13,7 +13,4 @@ ADD requirement.yml app_dash.py bin /root
 RUN apt update && apt install -y vim && \
 conda env create -f /root/requirement.yml 
 
-#TODO: conda activate : voir https://pythonspeed.com/articles/activate-conda-dockerfile/
-#TODO: set default conda env
-CMD /bin/bash
-#ENTRYPOINT /bin/bash
+CMD /root/bin/gunicorn_start
