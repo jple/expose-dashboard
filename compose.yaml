@@ -1,0 +1,20 @@
+services:
+  conda-c:
+    image: custom_conda:latest
+    build: 
+      context: containers/conda/ 
+      dockerfile: conda.dockerfile
+
+  nginx-c:
+    image: nginx:latest
+    configs:
+      - source: nginx_conf_default
+        target: /etc/nginx/conf.d/
+      - source: nginx_conf_location
+        target: /etc/nginx/location/
+
+configs:
+  nginx_conf_default:
+    file: containers/nginx/default.conf
+  nginx_conf_location:
+    file: containers/nginx/location_app.conf
