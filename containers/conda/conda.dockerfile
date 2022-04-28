@@ -15,6 +15,5 @@ conda env create -f /root/requirement.yml
 
 #TODO: conda activate : voir https://pythonspeed.com/articles/activate-conda-dockerfile/
 #TODO: set default conda env
-CMD /opt/conda/bin/conda activate expose_plot && pip install gunicorn && \
-/bin/bash
+CMD /bin/bash
 #ENTRYPOINT /bin/bash
