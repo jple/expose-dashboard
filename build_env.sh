@@ -19,7 +19,7 @@ docker start conda nginx ldap
 docker exec -it conda /bin/bash
 
 # configure gunicorn start script
-source activate explose_plot
+#source activate explose_plot
 /root/bin/gunicorn_start
 
 
