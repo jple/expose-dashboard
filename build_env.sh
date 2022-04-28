@@ -18,10 +18,8 @@ docker start conda nginx ldap
 # ---
 docker exec -it conda /bin/bash
 
-# Need to manually install gunicorn in the expose conda env...
-source activate explose_plot
-
 # configure gunicorn start script
+source activate explose_plot
 /root/bin/gunicorn_start
 
 
