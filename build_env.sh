@@ -14,16 +14,6 @@ docker start conda nginx ldap
 
 
 # ---
-# Setup gunicorn server in conda container
-# ---
-docker exec -it conda /bin/bash
-
-# configure gunicorn start script
-#source activate explose_plot
-/root/bin/gunicorn_start
-
-
-# ---
 # Setup nginx container
 # ---
 docker cp containers/nginx/default.conf nginx:/etc/nginx/conf.d/
