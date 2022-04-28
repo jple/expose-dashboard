@@ -17,3 +17,4 @@ conda env create -f /root/requirement.yml
 #TODO: set default conda env
 CMD /opt/conda/bin/conda activate expose_plot && pip install gunicorn && \
 /bin/bash
+#ENTRYPOINT /bin/bash
