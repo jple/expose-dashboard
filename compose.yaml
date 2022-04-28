@@ -4,6 +4,7 @@ services:
     build: 
       context: containers/conda/ 
       dockerfile: conda.dockerfile
+    tty: true
 
   nginx-c:
     image: nginx:latest
