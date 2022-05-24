@@ -7,15 +7,21 @@ services:
     tty: true
 
   nginx-c:
-    image: nginx:latest
-    configs:
-      - source: nginx_conf_default
-        target: /etc/nginx/conf.d/
-      - source: nginx_conf_location
-        target: /etc/nginx/location/
+    image: custom_nginx:latest
+    build:
+      context: containers/nginx
+      dockerfile: nginx.dockerfile
+    ports:
+      - "1234:80"
+#     image: nginx:latest
+#     configs:
+#       - source: nginx_conf_default
+#         target: /etc/nginx/conf.d/
+#       - source: nginx_conf_location
+#         target: /etc/nginx/location/
 
-configs:
-  nginx_conf_default:
-    file: containers/nginx/default.conf
-  nginx_conf_location:
-    file: containers/nginx/location_app.conf
+# configs:
+#   nginx_conf_default:
+#     file: containers/nginx/default.conf
+#   nginx_conf_location:
+#     file: containers/nginx/location_app.conf
