@@ -17,7 +17,6 @@ Chaque répertoire contient les fichiers à insérer dans les différents contai
 
 
 # Todo
-- créer une image nginx pour copier les fichiers de config...?
 - indiquer les ports ouverts dans conda.dockerfile
 - mettre en place le ldap
 - renseigner comment utiliser docker compose
