@@ -13,6 +13,8 @@ services:
       dockerfile: nginx.dockerfile
     ports:
       - "1234:80"
+    links:
+      - "conda-c:conda"
 #     image: nginx:latest
 #     configs:
 #       - source: nginx_conf_default
