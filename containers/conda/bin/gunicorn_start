@@ -17,5 +17,6 @@ source activate $CONDA_ENV
 gunicorn $MODULE_NAME:$VAR_NAME \
 --bind=$BIND \
 --name $NAME \
---error-logfile log.file \
+--access-logfile access.log \
+--error-logfile error.log \
 # --user=$USER --group=$GROUP \
