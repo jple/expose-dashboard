@@ -10,11 +10,14 @@ La solution consiste en les containers :
 Chaque répertoire contient les fichiers à insérer dans les différents containers.
 
 # Installation
-## Création des containers
-- conda : partir du dockerfile
-- nginx : utiliser l'image officiel nginx
-- ldap : utiliser l'image bitnami/openldap (?)
+Il faut au préalable créer les images à partir des dockerfile dans `containers/*/`
 
+## Option 1:  avec docker compose
+Il suffit de lancer la commande `docker compose up`  
+Celle-ci effectue la création des 3 containers dans un réseau spécifique
+
+## Option 2: manuellement
+Grosso modo, suivre les étapes décrites dans `build_env.sh`
 
 # Todo
 - rebuild image conda (.swp de trop)
