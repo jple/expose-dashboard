@@ -18,6 +18,5 @@ Chaque répertoire contient les fichiers à insérer dans les différents contai
 
 # Todo
 - rebuild image conda (.swp de trop)
-- indiquer les ports ouverts dans conda.dockerfile
 - mettre en place le ldap
 - renseigner comment utiliser docker compose
